@@ -1,8 +1,8 @@
 <div id="sidebar">
   <!-- Logo -->
   <div id="logo">
-    <h1><a href="<%- config.root %>"><%= config.title %></a></h1>
-    <h2><a href="<%- config.root %>"><% if (config.subtitle){ %><%= config.subtitle %><% } %></a></h2>
+    <h1><%= config.title %></h1>
+    <h2><% if (config.subtitle){ %><%= config.subtitle %><% } %></h2>
   </div>
   
   <!-- Nav -->
@@ -16,11 +16,9 @@
 
 
   <!-- Hexo Widgets -->
-  <section class="is-widgets">
-    <% theme.widgets.forEach(function(widget){ %>
+  <% theme.widgets.forEach(function(widget){ %>
     <%- partial('../_widget/' + widget) %>
-    <% }); %>
-  </section>	
+  <% }); %>
 
   <!-- Copyright -->
   <%- partial('footer') %>

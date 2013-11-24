@@ -6,7 +6,7 @@
 
 skel.init(
 	{
-		prefix: 'css/style',
+		prefix: '/css/style',
 		resetCSS: true,
 		useOrientation: true,
 		breakpoints: {
@@ -42,14 +42,14 @@ skel.init(
 					position: 'left',
 					style: 'reveal',
 					size: '250px',
-					html: '<div data-action="moveElement" data-args="sidebar"></div>'			
+					html: '<div data-action="moveElement" data-args="sidebar"></div>'
 				},
 				sidePanelNarrower: {
 					breakpoints: 'narrower',
 					position: 'left',
 					style: 'reveal',
 					size: '300px',
-					html: '<div data-action="moveElement" data-args="sidebar"></div>'			
+					html: '<div data-action="moveElement" data-args="sidebar"></div>'
 				}
 			},
 			overlays: {
