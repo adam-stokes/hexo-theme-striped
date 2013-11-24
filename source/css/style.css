@@ -1222,3 +1222,12 @@
   overflow: auto;
   color: #666;
 }
+
+code {
+    background-color: #eee;
+    border: 1px solid #bbb;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    overflow: auto;
+}
