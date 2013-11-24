@@ -1,0 +1,9 @@
+<!-- Pager -->
+<div class="pager">
+  <% if (page.prev){ %>
+    <a href="<%- config.root %><%- page.prev_link %>" class="button previous"><%= __('prev') %></a>
+  <% } %>
+  <% if (page.next){ %>
+    <a href="<%- config.root %><%- page.next_link %>" class="button next"><%= __('next') %></a>
+  <% } %>
+</div>
