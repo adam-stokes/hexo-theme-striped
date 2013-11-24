@@ -6,5 +6,17 @@
   <% } %>
   Powered by: <a href="https://github.com/tommy351/hexo">Hexo</a><br />
   Designed by: <a href="http://html5up.net/">HTML5 UP</a>
+  <p>
+    <% if (theme.twitter.username) { %>
+      <a href="https://twitter.com/<%= theme.twitter.username %>" class="fa fa-twitter">&nbsp;</a>
+     <% } %>
+    <% if (theme.facebook.username) { %>
+      <a href="https://facebook.com/<%= theme.facebook.username %>" class="fa fa-facebook">&nbsp;</a>
+     <% } %>
+    <% if (theme.google_plus.username) { %>
+      <a href="https://plus.google.com/+<%= theme.google_plus.username %>" class="fa fa-google-plus">&nbsp;</a>
+     <% } %>
+
+   </p>
 </div>
 

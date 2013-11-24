@@ -13,6 +13,12 @@ twitter:
   show_replies: false
   tweet_count: 5
 
+facebook:
+  username:
+
+google_plus:
+  username:
+
 addthis:
   enable: true
   pubid:
