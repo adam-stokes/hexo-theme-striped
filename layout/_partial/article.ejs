@@ -27,11 +27,13 @@
       <li><a href="#" class="fa fa-facebook">128</a></li>
     </ul>
   </div>
+  <div class="entry">
   <% if (item.excerpt && index){ %>
     <%- item.excerpt %>
   <% } else { %>
     <%- item.content %>
   <% } %>
+  </div>
   <footer>
     <% if (index){ %>
      <% if (item.excerpt){ %>
