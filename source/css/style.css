@@ -1231,3 +1231,13 @@ code {
     border-radius: 5px;
     overflow: auto;
 }
+
+pre {
+    background: #eee;
+    border: 1px solid #bbb;
+    margin-top: 15px;
+    padding: 7px 15px;
+    border-radius: 5px;
+    overflow: auto;
+}
+
