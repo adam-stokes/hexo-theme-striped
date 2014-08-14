@@ -1,11 +1,6 @@
-<% if (item.tags && item.tags.length){ %>
-  <%
-  var tags = [];
-  item.tags.forEach(function(tag){
-    tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
-  });
-  %>
-  <div class="tags">
-    <%- tags.join(', ') %>
-  </div>
+<% if (post.tags && post.tags.length){ %>
+  <%- list_tags(post.tags, {
+    show_count: false,
+    class: 'article-tag'
+  }) %>
 <% } %>

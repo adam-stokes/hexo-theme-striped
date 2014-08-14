@@ -1,29 +1,36 @@
 <!-- Post -->
-<article class="box post post-excerpt">
-  <% if (item.photos){ %>
-    <%- partial('post/gallery') %>
-  <% } %>
+<article id="<%= post.layout %>-<%= post.slug %>" class="box post post-excerpt">
   <header>
     <%- partial('post/title') %>
   </header>
   <div class="info">
-    <span class="date"><span class="month"><%= item.date.format('MMM') %></span> <span class="day"><%= item.date.format('D') %></span><span class="year">, <%= item.date.format('YYYY') %></span></span>
+    <span class="date"><span class="month"><%= post.date.format('MMM') %></span> <span class="day"><%= post.date.format('D') %></span><span class="year">, <%= post.date.format('YYYY') %></span></span>
     <ul class="stats">
       <%- partial('post/share_vertical') %>
-      <!--
-      <li><a href="#" class="fa fa-comment">16</a></li>
-      <li><a href="#" class="fa fa-heart">32</a></li>
-      <li><a href="#" class="fa fa-twitter">64</a></li>
-      <li><a href="#" class="fa fa-facebook">128</a></li>
-      -->
     </ul>
   </div>
   <p>
-  <% if (item.excerpt && index){ %>
-    <%- item.excerpt %>
+  <% if (post.excerpt && index){ %>
+    <%- post.excerpt %>
   <% } else { %>
-    <%- item.content %>
+    <%- post.content %>
   <% } %>
   </p>
+  <footer class="article-footer">
+    <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link">Share</a>
+    <% if (post.comments && config.disqus_shortname){ %>
+      <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link">Comments</a>
+    <% } %>
+    <%- partial('post/tag') %>
+  </footer>
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
 </article>
-<%- partial('comment') %>
+<% if (!index && post.comments && config.disqus_shortname){ %>
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+<% } %>
