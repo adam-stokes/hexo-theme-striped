@@ -1,13 +1,13 @@
-<% if (item.link){ %>
-  <% if (item.title){ %>
-    <h2><a href="<%- item.link %>" target="_blank"><%= item.title %></a></h2>
+<% if (post.link){ %>
+  <% if (post.title){ %>
+    <h2><a href="<%- post.link %>" target="_blank"><%= post.title %></a></h2>
   <% } else { %>
-    <h2><a href="<%- item.link %>" target="_blank"><%= item.link %></a></h2>
+    <h2><a href="<%- post.link %>" target="_blank"><%= post.link %></a></h2>
   <% } %>
 <% } else { %>
   <% if (index){ %>
-    <h2><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></h2>
+    <h2><a href="<%- config.root %><%- post.path %>"><%= post.title %></a></h2>
   <% } else { %>
-    <h2><%= item.title %></h2>
+    <h2><%= post.title %></h2>
   <% } %>
 <% } %>
