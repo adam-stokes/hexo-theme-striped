@@ -1,6 +1,8 @@
 <% if (site.posts.length){ %>
-  <section class="is-recent-posts">
-    <h2>Recent Posts</h2>
+  <section class="box recent-posts">
+    <header>
+      <h2>Recent Posts</h2>
+    </header>
     <ul>
       <% site.posts.sort( 'date', -1).limit(5).each(function(post){ %>
         <li>
