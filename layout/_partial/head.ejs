@@ -42,20 +42,16 @@
     <% if (page.keywords){ %>
         <meta name="keywords" content="<%= page.keywords %>">
     <% } %>
-    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    <%- js('js/jquery.min.js') %>
-    <%- js('js/skel.min.js') %>
-    <%- js('js/skel-panels.min.js') %>
-    <%- js('js/init.js') %>
-    <noscript>
-        <%- css('css/style.css') %>
-        <%- css('css/style-desktop.css') %>
-        <%- css('css/style-wide.css') %>
-    </noscript>
-    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <%- js('/js/jquery.min.js') %>
+    <%- js('/js/skel.min.js') %>
+    <%- js('/js/skel-panels.min.js') %>
+    <%- js('/js/init.js') %>
+    <%- css('/css/style.css') %>
+    <%- css('/css/style-desktop.css') %>
+    <%- css('/css/style-wide.css') %>
     <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
-    <%- css('js/styles/tomorrow-night.css') %>
-    <%- js('js/highlight.pack.js') %>
+    <%- css('/js/styles/tomorrow-night.css') %>
+    <%- js('/js/highlight.pack.js') %>
     <script>
         hljs.initHighlightingOnLoad();
     </script>
