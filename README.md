@@ -1,4 +1,5 @@
 # Striped
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/battlemidget/hexo-theme-striped?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Striped theme ported to [Hexo]
 
